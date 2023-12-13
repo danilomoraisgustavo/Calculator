@@ -1,0 +1,241 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+
+/* Estilo da Calculadora */
+.calculator {
+    background-color: #1c1c1c; /* Cor de fundo preta */
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%; /* Ajuste a largura conforme necessário */
+    box-shadow: none; /* Removendo sombra para o tema iOS */
+}
+
+/* Estilo do Display */
+.display {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    font-size: 2.5rem;
+    text-align: right;
+    border: none;
+    border-radius: 0; /* Removendo bordas arredondadas para o tema iOS */
+    height: auto; /* Ajuste para o tamanho automático */
+}
+
+/* Estilo dos Botões */
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    
+}
+
+
+.btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    font-size: 1.6rem;
+    flex: 1;
+    margin: 8px; /* Espaçamento entre botões */
+    border-radius: 50%; /* Botões redondos para o tema iOS */
+    padding: 20px; /* Ajuste de padding para melhor toque */
+}
+
+/* Estilo da Calculadora para Android */
+.calculator-android {
+    background-color: #2c2c2e; /* Cor de fundo ajustada para tema Android */
+    padding: 20px;
+    border-radius: 20px;
+    width: 320px; /* Largura ajustada para se parecer com a calculadora de Android */
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5); /* Sombra para dar um efeito elevado */
+}
+
+/* Estilo do Display para Android */
+.calculator-android .display {
+    background-color: #0a0a0a; /* Fundo do display mais escuro */
+    color: #76ff03; /* Cor do texto do display ajustada para verde claro do Android */
+    padding: 20px;
+    font-size: 2.5rem;
+    text-align: right;
+    border: none;
+    height: auto;
+}
+
+/* Estilo dos Botões para Android */
+.calculator-android .btn {
+    background-color: #333; /* Botões com um cinza mais escuro */
+    color: #fff;
+    border: none;
+    font-size: 1.6rem;
+    flex: 1;
+    margin: 8px;
+    border-radius: 50%; /* Manter os botões redondos */
+    padding: 20px;
+    /* Adicionando transição para o efeito de toque */
+    transition: background-color 0.3s ease;
+}
+
+/* Botões especiais para Android */
+.calculator-android .btn.special {
+    background-color: #4caf50; /* Cor verde para os botões especiais */
+    color: #000;
+}
+
+/* Botões de operação para Android */
+.calculator-android .operator {
+    background-color: #f57c00; /* Cor laranja para os botões de operação */
+}
+
+/* Estilos adicionais para botões específicos no tema Android */
+.calculator-android #clear {
+    background-color: #d32f2f; /* Cor vermelha para o botão AC */
+}
+
+.calculator-android #equals {
+    background-color: #f57c00; /* Cor laranja para o botão de igual */
+}
+
+/* Ajuste do botão zero para ocupar o espaço de dois botões no tema Android */
+.calculator-android .btn.zero {
+    flex: 2;
+    border-radius: 50%;
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+/* Estilos para quando um botão é tocado/ativo no tema Android */
+.calculator-android .btn:active {
+    background-color: #ddd;
+}
+
+/* Estilos específicos para os botões de operação quando ativos no tema Android */
+.calculator-android .btn.operator:active {
+    background-color: #e65100;
+}
+
+/* Removendo o foco do botão quando clicado no tema Android */
+.calculator-android .btn:focus {
+    outline: none;
+}
+
+/* Estilos para o tema iOS */
+.calculator-ios .btn {
+    background-color: #333; /* Botões cinza escuro */
+    color: #fff;
+    border: none;
+}
+
+.calculator-ios .btn.special {
+    background-color: #a5a5a5; /* Botões cinza claro */
+    color: #000;
+}
+
+.calculator-ios .operator {
+    background-color: #ff9f0a; /* Botões laranja para operações */
+}
+
+/* Estilos adicionais para botões específicos */
+#clear, .btn.special {
+    background-color: #a5a5a5;
+    color: #000;
+}
+
+#equals {
+    background-color: #ff9f0a;
+    color: white;
+}
+
+/* Ajuste do botão zero para ocupar o espaço de dois botões */
+.btn.zero {
+    flex: 2;
+    border-radius: 50%;
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+/* Estilos para quando um botão é tocado/ativo */
+.btn:active {
+    background-color: #ddd;
+}
+
+/* Estilos específicos para os botões de operação quando ativos */
+.btn.operator:active {
+    background-color: #cc7a00;
+}
+
+/* Removendo o foco do botão quando clicado */
+.btn:focus {
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo do Seletor de Estilos */
+.style-switcher {
+    position: absolute;
+    top: 20px; /* Ajuste conforme necessário para posicionar corretamente na sua página */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; /* Garante que o seletor fique acima de outros elementos */
+    font-size: 1rem;
+    color: #fff;
+    background-color: #333; /* Cor de fundo que combina com os botões da calculadora */
+    border: 1px solid #444; /* Uma borda sutil */
+    border-radius: 20px; /* Bordas arredondadas */
+    padding: 10px 2px;
+    margin-bottom: 20px; /* Espaço abaixo do seletor */
+}
+
+.style-switcher label {
+    margin-right: 10px;
+}
+
+.style-switcher select {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px; /* Bordas arredondadas para o select */
+    outline: none; /* Remove o contorno que aparece ao focar no elemento */
+}
+
+/* Mudar a cor do ícone de dropdown do select */
+.style-switcher select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #fff;
+}
+
+/* Estilo das opções dentro do select */
+.style-switcher option {
+    background: #333; /* Assegura que a cor de fundo das opções seja a mesma do select */
+    color: #fff;
+}
+
+/* Adiciona uma transição suave ao mudar os estilos do select */
+.style-switcher select {
+    transition: background-color 0.3s ease;
+}
+
+.style-switcher select:focus,
+.style-switcher select:hover {
+    background-color: #444; /* Um pouco mais claro ao passar o mouse ou focar */
+}

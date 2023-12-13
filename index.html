@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Estilo Android/iOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Input para selecionar o estilo da calculadora -->
+        <div class="style-switcher">
+            <label for="styleSelect">Escolha o estilo:</label>
+            <select id="styleSelect">
+                <option value="ios">iOS</option>
+                <option value="android">Android</option>
+            </select>
+        </div>
+
+        <!-- Calculadora -->
+        <div class="calculator calculator-ios">
+            <div id="display" class="display">0</div>
+            <div class="button-row">
+                <button class="btn special">AC</button>
+                <button class="btn special">+/-</button>
+                <button class="btn special">%</button>
+                <button class="btn operator">/</button>
+            </div>
+            <div class="button-row">
+                <button class="btn">7</button>
+                <button class="btn">8</button>
+                <button class="btn">9</button>
+                <button class="btn operator">*</button>
+            </div>
+            <div class="button-row">
+                <button class="btn">4</button>
+                <button class="btn">5</button>
+                <button class="btn">6</button>
+                <button class="btn operator">-</button>
+            </div>
+            <div class="button-row">
+                <button class="btn">1</button>
+                <button class="btn">2</button>
+                <button class="btn">3</button>
+                <button class="btn operator">+</button>
+            </div>
+            <div class="button-row">
+                <button class="btn zero">0</button>
+                <button class="btn">.</button>
+                <button class="btn" id="equals">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
